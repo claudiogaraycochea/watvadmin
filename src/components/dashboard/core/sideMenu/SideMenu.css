@@ -54,11 +54,11 @@
   width: 100%;
   background: #FAFAFA;
   min-height: 100%;
-  height: auto;
+  height: -webkit-fill-available;
 }
 
 .side-menu {
-  background-color: #1A2943;
+  background-color: #2E1467;
   color: #FFFFFF;
   position: fixed;
   top: 0;

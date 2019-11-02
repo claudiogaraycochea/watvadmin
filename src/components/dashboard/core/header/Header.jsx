@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { Modal } from '../../../ui/Theme';
@@ -81,8 +80,7 @@ class Header extends Component {
 				<div>
 					<div className='header-mobile'>
 						<div className='logo-wrapper'>
-							<i className='logo-public-bloc' />
-							<div className='text'>Public Bloc</div>
+							<i className='logo-webandtv' />
 						</div>
 						<div className='top-menu'>
 							<div className='top-menu-item'>
@@ -184,20 +182,5 @@ class Header extends Component {
 		);
 	}
 }
-
-Header.propTypes = {
-	headerTitle: PropTypes.string.isRequired,
-	device: PropTypes.string,
-	onChangeMenuStatus: PropTypes.func,
-	match: PropTypes.object.isRequired,
-	profile_picture: PropTypes.object,
-};
-
-Header.defaultProps = {
-	headerTitle: '',
-	device: 'desktop',
-	onChangeMenuStatus: () => null,
-	profile_picture: {},
-};
 
 export default Header;

@@ -12,11 +12,8 @@ class Dashboard extends Component {
 		this.state = {
 			menuStatus: '',
 		};
-	}
-
-	componentWillMount() {
 		const device = this.detectDevice();
-		const uid = localStorage.getItem('uid');
+		// const uid = localStorage.getItem('uid');
 		window.addEventListener('resize', this.handleWindowSizeChange);
 		this.props.setDevice(device);
 	}
@@ -74,9 +71,6 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
 	setDevice: PropType.func.isRequired,
 	children: PropType.node.isRequired,
-	getUserProjects: PropType.func.isRequired,
-	getUserInfo: PropType.func.isRequired,
-	projects: PropType.array.isRequired,
 	match: PropType.object.isRequired,
 };
 

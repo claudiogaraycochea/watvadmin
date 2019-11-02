@@ -9,6 +9,28 @@ body {
 	overflow-x: hidden;
 }
 
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
 a, a:hover, a:focus {
 	text-decoration: none;
 }
@@ -35,8 +57,7 @@ header .btn-link {
   margin-top: -5px;
 }
 
-.container {
-	margin-top: 60px;
+.container, .container-fluid {
 	padding: 30px;
 }
 
@@ -233,6 +254,10 @@ a {
 	background-image: url(../../assets/images/icon-micropayment.svg);
 }
 
+.icon-microads {
+	background-image: url(../../assets/images/icon-microads.svg);
+}
+
 .icon-big-data {
 	background-image: url(../../assets/images/icon-big-data.svg);
 }
@@ -255,7 +280,7 @@ a {
 	background-color: #FFFFFF;
 	padding: 10px;
 	border-radius: 10px;
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .box.blue {
@@ -491,7 +516,7 @@ a {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	body {
-		font-size: 18px !important;
+		font-size: 16px !important;
 	}
 	.box {
 		padding: 20px;

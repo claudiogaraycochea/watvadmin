@@ -1,6 +1,5 @@
 .side-menu-header {
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .side-menu .menu-items .item {
@@ -54,7 +53,6 @@
   width: 100%;
   background: #FAFAFA;
   min-height: 100%;
-  height: -webkit-fill-available;
 }
 
 .side-menu {

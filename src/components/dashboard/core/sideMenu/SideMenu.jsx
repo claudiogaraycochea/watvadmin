@@ -21,37 +21,43 @@ class SideMenu extends Component {
 					AMERICA TV
 				</div>
 				<div className='menu-items'>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/interactivity' className='text-white'>
 						<div className='item'>
 							<i className='icon-interactivity small space' />
 							INTERACTIVITY
 						</div>
 					</Link>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/micropayments' className='text-white'>
 						<div className='item'>
 							<i className='icon-micropayment small space' />
 							MICROPAYMENTS
 						</div>
 					</Link>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/microads' className='text-white'>
+						<div className='item'>
+							<i className='icon-microads small space' />
+							MICROADS
+						</div>
+					</Link>
+					<Link to='/dashboard/bigdata' className='text-white'>
 						<div className='item'>
 							<i className='icon-big-data small space' />
 							BIG DATA
 						</div>
 					</Link>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/analysis' className='text-white'>
 						<div className='item'>
 							<i className='icon-analysis small space' />
 							ANALISYS
 						</div>
 					</Link>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/support' className='text-white'>
 						<div className='item'>
 							<i className='icon-support small space' />
 							SUPPORT
 						</div>
 					</Link>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/innovation' className='text-white'>
 						<div className='item'>
 							<i className='icon-innovation small space' />
 							INNOVATION

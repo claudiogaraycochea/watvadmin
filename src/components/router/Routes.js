@@ -9,7 +9,11 @@ import Schedule from '../dashboard/schedule/ScheduleContainer';
 import BudgetingTool from '../dashboard/budgetingTool/BudgetingToolContainer';
 import GanttChart from '../dashboard/ganttChart/GanttChartContainer';
 */
-import OverView from '../dashboard/project/overView/OverViewContainer';
+import OverView from '../dashboard/overview/OverviewContainer';
+import Interactivity from '../dashboard/interactivity/InteractivityContainer';
+import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
+import MicroAds from '../dashboard/microAds/MicroAdsContainer';
+
 /*
 import ProjectDetail from '../dashboard/project/detail/ProjectDetailContainer';
 import ProjectEdit from '../dashboard/project/edit/ProjectEditContainer';
@@ -17,21 +21,21 @@ import ProjectAdd from '../dashboard/project/add/ProjectAddContainer';
 import TaskDetail from '../dashboard/task/detail/TaskDetailContainer';
 import MessagesContainer from '../dashboard/messages/MessagesContainer';*/
 import NotFound from '../public/error/notFound/NotFound';
-// import StyleGuide from '../ui/styleGuide/StyleGuide';
+import StyleGuide from '../ui/styleGuide/StyleGuide';
 /* Layouts */
 import Dashboard from '../dashboard/DashboardContainer';
 import PublicLayout from '../public/publicLayout/PublicLayout';
 import FullLayout from '../public/fullLayout/FullLayout';
 
 export const routes = [
-/*	{
+	{
 		id: 15,
 		exact: true,
 		path: '/dashboard/styleguide',
 		Component: StyleGuide,
 		Layout: Dashboard,
 		Access: 'Private',
-	},
+	},/*
 	{
 		id: 14,
 		exact: true,
@@ -95,15 +99,31 @@ export const routes = [
 		Component: ProjectDetail,
 		Layout: Dashboard,
 		Access: 'Private',
+	},*/
+	{
+		id: 8,
+		exact: true,
+		path: '/dashboard/microads',
+		Component: MicroAds,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 7,
+		exact: true,
+		path: '/dashboard/micropayments',
+		Component: MicroPayments,
+		Layout: Dashboard,
+		Access: 'Private',
 	},
 	{
 		id: 6,
 		exact: true,
-		path: '/dashboard/profile',
-		Component: UserProfile,
+		path: '/dashboard/interactivity',
+		Component: Interactivity,
 		Layout: Dashboard,
 		Access: 'Private',
-	},*/
+	},
 	{
 		id: 5,
 		exact: true,

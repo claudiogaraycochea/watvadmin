@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { setHeaderTitle } from '../../../../store/system/SystemActions';
-import OverView from './OverView';
+import { setHeaderTitle } from '../../../store/system/SystemActions';
+import Interactivity from './Interactivity';
 
 const mapStateToProps = (state) => {
 	return {
@@ -17,4 +17,4 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OverView);
+export default connect(mapStateToProps, mapDispatchToProps)(Interactivity);

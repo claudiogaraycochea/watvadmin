@@ -14,37 +14,49 @@ class SideMenu extends Component {
 			<div>
 				<div className='side-menu-header position-relative'>
 					<div className='logo-wrapper'>
-						<i className='logo-public-bloc' />
-						<div className='text'>Weband.tv</div>
+						<i className='logo-webandtv' />
 					</div>
+				</div>
+				<div className='channel-wrapper'>
+					AMERICA TV
 				</div>
 				<div className='menu-items'>
 					<Link to='/dashboard' className='text-white'>
 						<div className='item'>
-							<i className='icon-home-white small space' />
+							<i className='icon-interactivity small space' />
 							INTERACTIVITY
 						</div>
 					</Link>
-					<div className='item'>
-						<i className='icon-financial-white small space' />
-						MICROPAYMENTS
-					</div>
-					<div className='item'>
-						<i className='icon-bell-white small space' />
-						BIG DATA
-					</div>
-					<div className='item'>
-						<i className='icon-invoice-white small space' />
-						ANALISYS
-					</div>
-					<div className='item'>
-						<i className='icon-contractor-white small space' />
-						SUPPORT
-					</div>
-					<div className='item'>
-						<i className='icon-calendar-white small space' />
-						INNOVATION
-					</div>
+					<Link to='/dashboard' className='text-white'>
+						<div className='item'>
+							<i className='icon-micropayment small space' />
+							MICROPAYMENTS
+						</div>
+					</Link>
+					<Link to='/dashboard' className='text-white'>
+						<div className='item'>
+							<i className='icon-big-data small space' />
+							BIG DATA
+						</div>
+					</Link>
+					<Link to='/dashboard' className='text-white'>
+						<div className='item'>
+							<i className='icon-analysis small space' />
+							ANALISYS
+						</div>
+					</Link>
+					<Link to='/dashboard' className='text-white'>
+						<div className='item'>
+							<i className='icon-support small space' />
+							SUPPORT
+						</div>
+					</Link>
+					<Link to='/dashboard' className='text-white'>
+						<div className='item'>
+							<i className='icon-innovation small space' />
+							INNOVATION
+						</div>
+					</Link>
 				</div>
 				<div className='sidebar_footer'>
 					<span className='text-medium'>

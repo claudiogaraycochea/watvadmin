@@ -1,6 +1,5 @@
 .side-menu-header {
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .side-menu .menu-items .item {
@@ -54,11 +53,10 @@
   width: 100%;
   background: #FAFAFA;
   min-height: 100%;
-  height: auto;
 }
 
 .side-menu {
-  background-color: #1A2943;
+  background-color: #2E1467;
   color: #FFFFFF;
   position: fixed;
   top: 0;
@@ -79,6 +77,11 @@
   display: flex;
   flex-direction: column;
   width: -webkit-fill-available;
+}
+
+.channel-wrapper {
+  padding: 20px;
+  background: #1f0f48;
 }
 
 .container {

@@ -14,45 +14,59 @@ class SideMenu extends Component {
 			<div>
 				<div className='side-menu-header position-relative'>
 					<div className='logo-wrapper'>
-						<i className='logo-public-bloc' />
-						<div className='text'>Public Bloc</div>
+						<i className='logo-webandtv' />
 					</div>
 				</div>
+				<div className='channel-wrapper'>
+					AMERICA TV
+				</div>
 				<div className='menu-items'>
-					<Link to='/dashboard' className='text-white'>
+					<Link to='/dashboard/interactivity' className='text-white'>
 						<div className='item'>
-							<i className='icon-home-white small space' />
-							{'Home'}
+							<i className='icon-interactivity small space' />
+							INTERACTIVITY
 						</div>
 					</Link>
-					<div className='item'>
-						<i className='icon-financial-white small space' />
-						{'Financial Dashboard'}
-					</div>
-					<div className='item'>
-						<i className='icon-bell-white small space' />
-						{'Notifications'}
-					</div>
-					<div className='item'>
-						<i className='icon-invoice-white small space' />
-						{'Invoices'}
-					</div>
-					<div className='item'>
-						<i className='icon-contractor-white small space' />
-						{'Contractors'}
-					</div>
-					<div className='item'>
-						<i className='icon-calendar-white small space' />
-						{'Calendar'}
-					</div>
-					<div className='item'>
-						<i className='icon-settings-white small space' />
-						{'Settings'}
-					</div>
+					<Link to='/dashboard/micropayments' className='text-white'>
+						<div className='item'>
+							<i className='icon-micropayment small space' />
+							MICRO PAYMENTS
+						</div>
+					</Link>
+					<Link to='/dashboard/microads' className='text-white'>
+						<div className='item'>
+							<i className='icon-microads small space' />
+							MICRO ADS
+						</div>
+					</Link>
+					<Link to='/dashboard/bigdata' className='text-white'>
+						<div className='item'>
+							<i className='icon-big-data small space' />
+							BIG DATA
+						</div>
+					</Link>
+					<Link to='/dashboard/analysis' className='text-white'>
+						<div className='item'>
+							<i className='icon-analysis small space' />
+							ANALISYS
+						</div>
+					</Link>
+					<Link to='/dashboard/support' className='text-white'>
+						<div className='item'>
+							<i className='icon-support small space' />
+							SUPPORT
+						</div>
+					</Link>
+					<Link to='/dashboard/innovation' className='text-white'>
+						<div className='item'>
+							<i className='icon-innovation small space' />
+							INNOVATION
+						</div>
+					</Link>
 				</div>
 				<div className='sidebar_footer'>
 					<span className='text-medium'>
-						{`Copyright &copy; ${new Date().getFullYear()} Public Bloc`}
+						{`Copyright ${new Date().getFullYear()} Weband.tv`}
 					</span>
 				</div>
 			</div>

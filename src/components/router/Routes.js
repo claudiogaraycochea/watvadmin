@@ -1,37 +1,32 @@
 /* Pages */
 import Login from '../auth/login/LoginContainer';
-// import AboutUs from '../public/pages/aboutUs/AboutUs';
-// import ContactUs from '../public/pages/contactUs/ContactUs';
-// import Job from '../public/pages/job/Job';
-/* import SignUp from '../auth/signUp/SignUpContainer';
-import UserProfile from '../dashboard/user/profile/ProfileContainer';
-import Schedule from '../dashboard/schedule/ScheduleContainer';
-import BudgetingTool from '../dashboard/budgetingTool/BudgetingToolContainer';
-import GanttChart from '../dashboard/ganttChart/GanttChartContainer';
-*/
-import OverView from '../dashboard/project/overView/OverViewContainer';
-/*
-import ProjectDetail from '../dashboard/project/detail/ProjectDetailContainer';
-import ProjectEdit from '../dashboard/project/edit/ProjectEditContainer';
-import ProjectAdd from '../dashboard/project/add/ProjectAddContainer';
-import TaskDetail from '../dashboard/task/detail/TaskDetailContainer';
-import MessagesContainer from '../dashboard/messages/MessagesContainer';*/
+import OverView from '../dashboard/overview/OverviewContainer';
+import Interactivity from '../dashboard/interactivity/InteractivityContainer';
+
+import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
+import MicroPaymentsDetail from '../dashboard/microPayments/detail/DetailContainer';
+
+import MicroAds from '../dashboard/microAds/MicroAdsContainer';
+import BigData from '../dashboard/bigData/BigDataContainer';
+import Analysis from '../dashboard/analysis/AnalysisContainer';
+import Support from '../dashboard/support/SupportContainer';
+import Innovation from '../dashboard/innovation/InnovationContainer';
 import NotFound from '../public/error/notFound/NotFound';
-// import StyleGuide from '../ui/styleGuide/StyleGuide';
+import StyleGuide from '../ui/styleGuide/StyleGuide';
 /* Layouts */
 import Dashboard from '../dashboard/DashboardContainer';
 import PublicLayout from '../public/publicLayout/PublicLayout';
 import FullLayout from '../public/fullLayout/FullLayout';
 
 export const routes = [
-/*	{
+	{
 		id: 15,
 		exact: true,
 		path: '/dashboard/styleguide',
 		Component: StyleGuide,
 		Layout: Dashboard,
 		Access: 'Private',
-	},
+	},/*
 	{
 		id: 14,
 		exact: true,
@@ -87,23 +82,71 @@ export const routes = [
 		Component: ProjectAdd,
 		Layout: Dashboard,
 		Access: 'Private',
+	},*/
+	{
+		id: 7,
+		exact: true,
+		path: '/dashboard/micropayments/detail/:project_id',
+		Component: MicroPaymentsDetail,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 12,
+		exact: true,
+		path: '/dashboard/innovation',
+		Component: Innovation,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 11,
+		exact: true,
+		path: '/dashboard/support',
+		Component: Support,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 10,
+		exact: true,
+		path: '/dashboard/analysis',
+		Component: Analysis,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 9,
+		exact: true,
+		path: '/dashboard/bigdata',
+		Component: BigData,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 8,
+		exact: true,
+		path: '/dashboard/microads',
+		Component: MicroAds,
+		Layout: Dashboard,
+		Access: 'Private',
 	},
 	{
 		id: 7,
 		exact: true,
-		path: '/dashboard/project/detail/:project_id',
-		Component: ProjectDetail,
+		path: '/dashboard/micropayments',
+		Component: MicroPayments,
 		Layout: Dashboard,
 		Access: 'Private',
 	},
 	{
 		id: 6,
 		exact: true,
-		path: '/dashboard/profile',
-		Component: UserProfile,
+		path: '/dashboard/interactivity',
+		Component: Interactivity,
 		Layout: Dashboard,
 		Access: 'Private',
-	},*/
+	},
 	{
 		id: 5,
 		exact: true,

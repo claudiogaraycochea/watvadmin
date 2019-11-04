@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import {
-	Row, Col, Alert, Button, Form, Image,
+	Row, Col, Alert, Button, Form,
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import Toggle from 'react-toggle';
 
 import { connect } from 'react-redux';
 
 import {
 	ButtonHotAccessIcon, StatusBar, StatusNotification, UserProject, Modal,
 } from '../Theme';
-import projectImage from '../../../assets/images/project-image.svg';
 
 import { setHeaderTitle } from '../../../store/system/SystemActions';
 
@@ -22,11 +20,9 @@ class StyleGuide extends Component {
 		this.state = {
 			modalShow: false,
 			children: <div />,
-			btnToggleReady: false,
 		};
 		this.handleModalClose = this.handleModalClose.bind(this);
 		this.handleModalAccept = this.handleModalAccept.bind(this);
-		this.handleBtnToggleChange = this.handleBtnToggleChange.bind(this);
 	}
 
 	componentWillMount() {
@@ -46,23 +42,12 @@ class StyleGuide extends Component {
 		this.setState({ modalShow: false });
 	}
 
-	handleBtnToggleChange() {
-		this.setState((prevState) => {
-			return { btnToggleReady: !prevState.btnToggleReady };
-		});
-	}
-
 	render() {
 		const { modalShow, children } = this.state;
 		return (
 			<div>
 				<Row>
 					<Col>
-						<Toggle
-							defaultChecked={this.state.btnToggleReady}
-							icons={false}
-							onChange={this.handleBtnToggleChange}
-						/>
 					</Col>
 				</Row>
 				<Row>
@@ -172,7 +157,7 @@ class StyleGuide extends Component {
 									<Row>
 										<Col>
 											<div className='d-flex justify-content-center'>
-												<Image src={projectImage} roundedCircle />
+												
 											</div>
 										</Col>
 									</Row>
@@ -339,7 +324,6 @@ class StyleGuide extends Component {
 									<Row>
 										<Col>
 											<div className='d-flex justify-content-center'>
-												<Image src={projectImage} roundedCircle />
 											</div>
 										</Col>
 									</Row>

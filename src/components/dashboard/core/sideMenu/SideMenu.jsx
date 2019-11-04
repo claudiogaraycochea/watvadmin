@@ -30,13 +30,13 @@ class SideMenu extends Component {
 					<Link to='/dashboard/micropayments' className='text-white'>
 						<div className='item'>
 							<i className='icon-micropayment small space' />
-							MICROPAYMENTS
+							MICRO PAYMENTS
 						</div>
 					</Link>
 					<Link to='/dashboard/microads' className='text-white'>
 						<div className='item'>
 							<i className='icon-microads small space' />
-							MICROADS
+							MICRO ADS
 						</div>
 					</Link>
 					<Link to='/dashboard/bigdata' className='text-white'>

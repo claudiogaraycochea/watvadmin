@@ -104,8 +104,8 @@ a .btn, .btn {
 }
 
 .btn-secondary {
-	background-color: #9100ed;
-	border-color: #9100ed;
+	background-color: #641b9a;
+	border-color: #641b9a;
 	color: #FFFFFF;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -456,6 +456,18 @@ a {
 	font-size: 18px;
 }
 
+.text-large {
+	font-size: 18px;
+}
+
+.text-xlarge {
+	font-size: 26px;
+}
+
+.highlight {
+	color: #2E1467;
+}
+
 .text-muted {
 	color: #5A7F9E !important;
 }
@@ -511,6 +523,18 @@ a {
 	padding: 15px 15px 0 15px;
 	display: flex;
 	justify-content: flex-end;
+}
+
+.table-responsive td, .table-responsive th {
+	padding: 20px 10px;
+}
+
+.table-responsive th {
+	color: #5A7F9E;
+}
+
+.table-resp {
+	width: 100%;
 }
 
 /* Medium devices (tablets, 768px and up) */

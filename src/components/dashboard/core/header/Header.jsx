@@ -34,7 +34,7 @@ class Header extends Component {
 		const navigationProject = (project_id) ? (
 			<div className='nav-bar-item'>
 				<div className='separator'>/</div>
-				<Link to={`/dashboard/project/detail/${project_id}`}>Project</Link>
+				<Link to={`/dashboard/micropayments/`}>Micro Payments</Link>
 			</div>
 		) : null;
 

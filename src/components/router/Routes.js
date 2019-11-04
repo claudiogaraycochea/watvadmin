@@ -1,25 +1,16 @@
 /* Pages */
 import Login from '../auth/login/LoginContainer';
-// import AboutUs from '../public/pages/aboutUs/AboutUs';
-// import ContactUs from '../public/pages/contactUs/ContactUs';
-// import Job from '../public/pages/job/Job';
-/* import SignUp from '../auth/signUp/SignUpContainer';
-import UserProfile from '../dashboard/user/profile/ProfileContainer';
-import Schedule from '../dashboard/schedule/ScheduleContainer';
-import BudgetingTool from '../dashboard/budgetingTool/BudgetingToolContainer';
-import GanttChart from '../dashboard/ganttChart/GanttChartContainer';
-*/
 import OverView from '../dashboard/overview/OverviewContainer';
 import Interactivity from '../dashboard/interactivity/InteractivityContainer';
-import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
-import MicroAds from '../dashboard/microAds/MicroAdsContainer';
 
-/*
-import ProjectDetail from '../dashboard/project/detail/ProjectDetailContainer';
-import ProjectEdit from '../dashboard/project/edit/ProjectEditContainer';
-import ProjectAdd from '../dashboard/project/add/ProjectAddContainer';
-import TaskDetail from '../dashboard/task/detail/TaskDetailContainer';
-import MessagesContainer from '../dashboard/messages/MessagesContainer';*/
+import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
+import MicroPaymentsDetail from '../dashboard/microPayments/detail/DetailContainer';
+
+import MicroAds from '../dashboard/microAds/MicroAdsContainer';
+import BigData from '../dashboard/bigData/BigDataContainer';
+import Analysis from '../dashboard/analysis/AnalysisContainer';
+import Support from '../dashboard/support/SupportContainer';
+import Innovation from '../dashboard/innovation/InnovationContainer';
 import NotFound from '../public/error/notFound/NotFound';
 import StyleGuide from '../ui/styleGuide/StyleGuide';
 /* Layouts */
@@ -91,15 +82,47 @@ export const routes = [
 		Component: ProjectAdd,
 		Layout: Dashboard,
 		Access: 'Private',
-	},
+	},*/
 	{
 		id: 7,
 		exact: true,
-		path: '/dashboard/project/detail/:project_id',
-		Component: ProjectDetail,
+		path: '/dashboard/micropayments/detail/:project_id',
+		Component: MicroPaymentsDetail,
 		Layout: Dashboard,
 		Access: 'Private',
-	},*/
+	},
+	{
+		id: 12,
+		exact: true,
+		path: '/dashboard/innovation',
+		Component: Innovation,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 11,
+		exact: true,
+		path: '/dashboard/support',
+		Component: Support,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 10,
+		exact: true,
+		path: '/dashboard/analysis',
+		Component: Analysis,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
+	{
+		id: 9,
+		exact: true,
+		path: '/dashboard/bigdata',
+		Component: BigData,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
 	{
 		id: 8,
 		exact: true,

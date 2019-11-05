@@ -1,42 +1,46 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
-class AverageCost extends Component {
+class GenderWidget extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			data: [],
+			options: {},
 		};
 	}
 
 	UNSAFE_componentWillMount() {
 		const data = {
-			labels: [],
+			labels: [
+				'Undefined',
+				'Male',
+				'Female',
+			],
 			datasets: [
 				{
-					label: 'Tasks Status',
-					data: [],
-					backgroundColor: [],
+					label: 'Gender',
+					data: [
+						70,
+						60,
+						15,
+					],
+					backgroundColor: [
+						'#7077c5',
+						'#16E7B5',
+						'#FE7B7B',
+					],
 				},
 			],
 		};
 
 		const options = {
 			legend: {
-				display: false,
+				display: true,
 			},
 			maintainAspectRatio: false,
 			responsive: true,
-			cutoutPercentage: 60,
-			scales: {
-				xAxes: [{
-					stacked: true,
-				}],
-				yAxes: [{
-					stacked: true,
-				}],
-			},
 		};
 
 		this.setState({ data, options });
@@ -48,13 +52,14 @@ class AverageCost extends Component {
 			<div className='box'>
 				<Row>
 					<Col className='min-bottom'>
-						<h3>Time by Phases/Tasks (Days)</h3>
+						<h3>Gender</h3>
 					</Col>
 				</Row>
-				<Row className='div-line none-bottom'>
+				<Row className='div-line'>
 					<Col>
-						<Bar
+						<Pie
 							data={data}
+							width={300}
 							height={280}
 							options={options}
 						/>
@@ -65,4 +70,4 @@ class AverageCost extends Component {
 	}
 }
 
-export default AverageCost;
+export default GenderWidget;

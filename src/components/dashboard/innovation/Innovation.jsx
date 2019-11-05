@@ -19,14 +19,7 @@ class Innovation extends Component {
 						<div className='box'>
 							<Row>
 								<Col>
-									Click here to access to Innovation
-								</Col>
-								<Col className='d-flex justify-content-end'>
-									<a href='https://analytics.google.com/analytics/web/'>
-										<Button className='btn-secondary'>
-											Visit Innovation
-										</Button>
-									</a>
+									An idea or suggestion could be a big business, we love ear about your comments. Write us to <a href='mailto:claudio@weband.tv'>claudio@weband.tv</a>.
 								</Col>
 							</Row>
 						</div>

@@ -45,12 +45,6 @@ class SideMenu extends Component {
 							BIG DATA
 						</div>
 					</Link>
-					<Link to='/dashboard/analysis' className='text-white'>
-						<div className='item'>
-							<i className='icon-analysis small space' />
-							ANALISYS
-						</div>
-					</Link>
 					<Link to='/dashboard/support' className='text-white'>
 						<div className='item'>
 							<i className='icon-support small space' />

@@ -1,79 +1,148 @@
 import React, { Component } from 'react';
 import {
-	Row, Col,
+	Row, Col, Form, Button, Table,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Modal } from '../../ui/Theme';
 import './Overview.css';
+
+import TimeWidget from '../bigData/widgets/time/TimeWidget';// '../bigData/widgets/time/TimeWidget';
+import GenderWidget from '../bigData/widgets/gender/GenderWidget';
+import AgeWidget from '../bigData/widgets/age/AgeWidget';
 
 class Overview extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
-		this.props.setHeaderTitle('Welcome');
+		this.state = {
+			modalShow: false,
+			children: <div />,
+			validated: false,
+			start_date: '10/10/2019',
+			end_date: '10/10/2019',
+			gender: '',
+			location: '',
+			tags: '',
+			payment: '',
+		};
+		this.props.setHeaderTitle('BIG DATA');
+
 	}
 
 	render() {
+		const {
+			modalShow,
+			children,
+			validated,
+			start_date,
+			end_date,
+			gender,
+			location,
+			tags,
+			payment,
+		} = this.state;
 		return (
 			<div>
 				<Row>
 					<Col>
-						<h2>Title</h2>
-					</Col>				
+						<h2>Overview</h2>
+					</Col>
+					<Col className='d-flex justify-content-end'>
+						<Link
+							to={'/dashboard/bigdata'}
+						>
+							<Button className='btn-secondary'>
+								Go to Big Data
+							</Button>
+						</Link>
+					</Col>	
 				</Row>
 				<Row>
 					<Col>
 						<div className='box'>
-							<h3>Overall Data </h3>
-							<div>
-								<small className='text-muted'>Total Views</small>
-								300,000
-							</div>
-							<div>
-								Average Views per Day
-								50,000 Visits
-							</div>
-						</div>
-					</Col>
-					<Col>
-						<div className='box'>
-							<h3>Earned</h3>
-							<div>
-								Total
+							<h3>Micro Ads</h3>
+							<div className='text-xlarge highlight'>
 								$500,000
 							</div>
-							<div>
-								MICRO-PAYMENT:
-								$200,000
-							</div>
-							<div>
-								MICRO-ADS
-								$300,000 
+						</div>
+					</Col>
+					<Col>
+						<div className='box'>
+							<h3>Micro Payments</h3>
+							<div className='text-xlarge highlight'>
+								$1,500,000
 							</div>
 						</div>
 					</Col>
 					<Col>
 						<div className='box'>
-							<h3>Visits this month</h3>
-							<div>
-								Intrusos    3,000,000    $100,000
-							</div>
-							<div>
-								Incorrectas    3,000,000    $100,000
-							</div>
-							<div>
-								Pamela a la tarde 3,000,000    $100,000
+							<h3>Micro Ads</h3>
+							<div className='text-xlarge highlight'>
+								$500,000
 							</div>
 						</div>
 					</Col>
 				</Row>
 				<Row>
 					<Col>
+						<TimeWidget />
+					</Col>
+				</Row>
+				<Row>
+					<Col xs={12} md={4}>
+						<GenderWidget />
+					</Col>
+					<Col xs={12} md={8}>
+						<AgeWidget />
+					</Col>
+				</Row>
+				<Row>
+					<Col>
 						<div className='box'>
-							Revenue by Months
+							<Row>
+								<Col>
+									<h3>Visits this month</h3>
+								</Col>
+							</Row>
+							<div className='table-responsive'>
+								<Table>
+									<thead>
+										<tr>
+											<th className='w-20'>Name</th>
+											<th>Visitors</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Intrusos</td>
+											<td>3,000,000</td>
+											<td>$200,000</td>
+										</tr>
+										<tr>
+											<td>Incorrectas</td>
+											<td>2,000,000</td>
+											<td>$240,000</td>
+										</tr>
+										<tr>
+											<td>Pamela a la Tarde</td>
+											<td>3,000,000</td>
+											<td>$180,000</td>
+										</tr>
+									</tbody>
+								</Table>
+							</div>
 						</div>
 					</Col>
 				</Row>
+				<Modal
+					show={modalShow}
+					handleClose={this.handleModalClose}
+					handleAccept={this.handleModalAccept}
+				>
+					{children}
+				</Modal>
 			</div>
-		)
+		);
 	}
 }
 

@@ -4,6 +4,11 @@ import {
 } from 'react-bootstrap';
 import './BigData.css';
 
+import CostRevenues from './widgets/costRevenues/CostRevenues';
+import AverageCost from './widgets/averageCost/AverageCost';
+import CostPhases from './widgets/costPhases/CostPhases';
+import TimePhases from './widgets/timePhases/TimePhases';
+
 class BigData extends Component {
 	constructor(props) {
 		super(props);
@@ -58,6 +63,22 @@ class BigData extends Component {
 								Pamela a la tarde 3,000,000    $100,000
 							</div>
 						</div>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<CostRevenues />
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<CostPhases />
+					</Col>
+					<Col>
+						<TimePhases />
+					</Col>
+					<Col>
+						<AverageCost />
 					</Col>
 				</Row>
 				<Row>

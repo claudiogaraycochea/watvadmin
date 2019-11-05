@@ -27,7 +27,7 @@ const projectsMicropayments = [
 		status: 0,
 		amount: '100', 
 	},
-]
+];
 
 class MicroPayments extends Component {
 	constructor(props) {
@@ -48,8 +48,8 @@ class MicroPayments extends Component {
 				<td>{item.name}</td>
 				<td>{item.start_date}</td>
 				<td>{item.end_date}</td>
-				<td>{item.amount}</td>
 				<td>{item.status}</td>
+				<td>${item.amount}</td>
 				<td>
 					<div className='d-flex justify-content-end'>
 						<Button
@@ -139,7 +139,7 @@ class MicroPayments extends Component {
 					</Col>
 					<Col>
 						<div className='box'>
-							<h3>Advertises</h3>
+							<h3>Users</h3>
 							<div className='text-xlarge highlight'>
 								300
 							</div>

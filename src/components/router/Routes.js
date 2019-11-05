@@ -7,6 +7,8 @@ import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
 import MicroPaymentsDetail from '../dashboard/microPayments/detail/DetailContainer';
 
 import MicroAds from '../dashboard/microAds/MicroAdsContainer';
+import MicroAdsDetail from '../dashboard/microAds/detail/DetailContainer';
+
 import BigData from '../dashboard/bigData/BigDataContainer';
 import Analysis from '../dashboard/analysis/AnalysisContainer';
 import Support from '../dashboard/support/SupportContainer';
@@ -83,6 +85,14 @@ export const routes = [
 		Layout: Dashboard,
 		Access: 'Private',
 	},*/
+	{
+		id: 8,
+		exact: true,
+		path: '/dashboard/microAds/detail/:project_id',
+		Component: MicroAdsDetail,
+		Layout: Dashboard,
+		Access: 'Private',
+	},
 	{
 		id: 7,
 		exact: true,

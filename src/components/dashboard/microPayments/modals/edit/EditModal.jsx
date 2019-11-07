@@ -39,7 +39,7 @@ class EditModal extends Component {
 					{(notification.status) ? <Alert variant='success'>{notification.text}</Alert> : null}
 					<Row>
 						<Col>
-						<Form.Group>
+							<Form.Group>
 								<Form.Label>Project Name</Form.Label>
 								<Form.Control
 									type='text'
@@ -74,6 +74,50 @@ class EditModal extends Component {
 									<Form.Label>End Date</Form.Label>
 									<Form.Control
 										type='date'
+										name='project_end_date'
+										value={project_end_date}
+										onChange={this.handleInputChange}
+									/>
+								</Form.Group>
+							</Form.Row>
+							<Form.Group>
+								<Form.Label>Take customers to this URL when they cancel their checkout</Form.Label>
+								<Form.Control
+									type='text'
+									placeholder='Ex: https://www.mystore.com/cancel'
+									name='project_name'
+									value={project_name}
+									onChange={this.handleInputChange}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Form.Label>Take customers to this URL when they finish checkout</Form.Label>
+								<Form.Control
+									type='text'
+									placeholder='Ex: https://www.mystore.com/success'
+									name='project_name'
+									value={project_name}
+									onChange={this.handleInputChange}
+								/>
+							</Form.Group>
+							<Form.Row>
+								<Form.Group as={Col}>
+									<Form.Label>Money</Form.Label>
+									<Form.Control
+										as='select'
+										name='project_start_date'
+										value={project_start_date}
+										onChange={this.handleInputChange}
+									>
+										<option value='AR'>Peso Argentino</option>
+										<option value='US'>Dolar</option>
+										<option value='EU'>Euro</option>
+									</Form.Control>
+								</Form.Group>
+								<Form.Group as={Col}>
+									<Form.Label>Amount</Form.Label>
+									<Form.Control
+										type='number'
 										name='project_end_date'
 										value={project_end_date}
 										onChange={this.handleInputChange}

@@ -48,10 +48,6 @@ class TimeWidget extends Component {
 						1000000,
 					],
 					backgroundColor: '#2E1467',
-					borderColor: '#388cf2',
-					pointBorderColor: '#388cf2',
-					pointBackgroundColor: '#388cf2',
-					pointBorderWidth: 1,
 				},
 				
 			],

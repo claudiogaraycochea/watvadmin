@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { Table, Modal } from '../../ui/Theme';
 import './MicroAds.css';
 
-import AddModal from './modals/add/AddModalContainer';
 import EditModal from './modals/edit/EditModalContainer';
 import RemoveModal from './modals/remove/RemoveModalContainer';
 
@@ -121,19 +120,6 @@ class MicroAds extends Component {
 				<Row>
 					<Col>
 						<h2>Overview</h2>
-					</Col>
-					<Col className='d-flex justify-content-end'>
-						<Button
-							className='btn-secondary'
-							onClick={() => this.handleModal(
-								<AddModal
-									handleModalClose={this.handleModalClose}
-									handleModalAccept={this.handleModalAccept}
-								/>,
-							)}
-						>
-							Add Micro Ads
-						</Button>
 					</Col>
 				</Row>
 				<Row>

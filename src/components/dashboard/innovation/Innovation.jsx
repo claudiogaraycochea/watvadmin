@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-	Row, Col, Button,
+	Row, Col,
 } from 'react-bootstrap';
 import './Innovation.css';
 
@@ -19,7 +19,7 @@ class Innovation extends Component {
 						<div className='box'>
 							<Row>
 								<Col>
-									An idea or suggestion could be a big business, we love ear about your comments. Write us to <a href='mailto:claudio@weband.tv'>claudio@weband.tv</a>.
+								An idea or suggestion could be a big business, we love hear about your comments. Write to us at <a href='mailto:claudio@weband.tv'>claudio@weband.tv</a>.
 								</Col>
 							</Row>
 						</div>

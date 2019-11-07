@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-	Row, Col, Form, Button, Table,
+	Row, Col, Button, Table,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Modal } from '../../ui/Theme';
@@ -25,20 +25,26 @@ class Overview extends Component {
 			payment: '',
 		};
 		this.props.setHeaderTitle('BIG DATA');
+		this.handleModalClose = this.handleModalClose.bind(this);
+		this.handleModalAccept = this.handleModalAccept.bind(this);
+	}
 
+	handleModalClose() {
+		this.setState({ modalShow: false });
+	}
+
+	handleModalAccept() {
+		this.setState({ modalShow: false });
+	}
+
+	handleModal(children) {
+		this.setState({ modalShow: true, children });
 	}
 
 	render() {
 		const {
 			modalShow,
 			children,
-			validated,
-			start_date,
-			end_date,
-			gender,
-			location,
-			tags,
-			payment,
 		} = this.state;
 		return (
 			<div>

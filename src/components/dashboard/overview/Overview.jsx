@@ -81,9 +81,9 @@ class Overview extends Component {
 					</Col>
 					<Col>
 						<div className='box'>
-							<h3>Micro Ads</h3>
+							<h3>Total Earned</h3>
 							<div className='text-xlarge highlight'>
-								$500,000
+								$2,000,000
 							</div>
 						</div>
 					</Col>

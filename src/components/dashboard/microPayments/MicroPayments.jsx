@@ -17,7 +17,7 @@ const projectsMicropayments = [
 		start_date: '10:20hs 10/01/2019',
 		end_date: '10:20hs 10/01/2019',
 		status: 1,
-		amount: '120', 
+		amount: '120,000', 
 	},
 	{
 		project_id: '29102332132',
@@ -25,7 +25,7 @@ const projectsMicropayments = [
 		start_date: '10:20hs 10/01/2019',
 		end_date: '10:20hs 10/01/2019',
 		status: 0,
-		amount: '100', 
+		amount: '180,000', 
 	},
 ];
 

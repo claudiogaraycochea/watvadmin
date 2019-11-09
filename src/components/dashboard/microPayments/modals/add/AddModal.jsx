@@ -20,7 +20,7 @@ class AddModal extends Component {
 	}
 
 	addMicroPayment() {
-		const micro_payment_url = 'https://weband.tv/payment/?e839322984239';
+		const micro_payment_url = 'http://192.168.0.12:3000/buynow/32442';
 		this.setState({micro_payment_url});
 	}
 

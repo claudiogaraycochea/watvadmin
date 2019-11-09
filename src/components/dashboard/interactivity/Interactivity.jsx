@@ -19,12 +19,12 @@ class Interactivity extends Component {
 						<div className='box'>
 							<Row>
 								<Col>
-									Click here to access to Weband.tv Interactivity
+									Access to the tool for generating interactivity with your viewers.
 								</Col>
 								<Col className='d-flex justify-content-end'>
 									<a href='https://weband.tv/instant/admin/account/'>
 										<Button className='btn-secondary'>
-											Visit Interactivity
+											Interactivity
 										</Button>
 									</a>
 								</Col>

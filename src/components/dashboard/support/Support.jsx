@@ -19,12 +19,12 @@ class Support extends Component {
 						<div className='box'>
 							<Row>
 								<Col>
-									Click here to access to Support
+									We appreciate discussing with you about solutions.
 								</Col>
 								<Col className='d-flex justify-content-end'>
 									<a href='https://analytics.google.com/analytics/web/'>
 										<Button className='btn-secondary'>
-											Visit Support
+											Support
 										</Button>
 									</a>
 								</Col>

@@ -31,7 +31,7 @@ class RemoveModal extends Component {
 					{(notification.status) ? <Alert variant='success'>{notification.text}</Alert> : null}
 					<Row>
 						<Col>
-							Do you wish remove this project?
+							Do you wish to remove this project?
 						</Col>
 					</Row>
 				</div>

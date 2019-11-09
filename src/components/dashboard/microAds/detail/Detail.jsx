@@ -56,7 +56,7 @@ class Detail extends Component {
 											<td className='w-20'>29102332131</td>
 											<td>Claudio Garaycochea</td>
 											<td>10:20hs 10/01/2019</td>
-											<td>$20</td>
+											<td>$3000</td>
 										</tr>
 									</tbody>
 								</Table>

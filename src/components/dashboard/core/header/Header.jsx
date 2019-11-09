@@ -8,16 +8,6 @@ import LogOutModal from '../../../auth/logOut/modal/LogOutModalContainer';
 
 import './Header.css';
 
-function arrayBufferToBase64(buffer) {
-	let binary = '';
-	const bytes = new Uint8Array(buffer);
-	const len = bytes.byteLength;
-	for (let i = 0; i < len; i++) {
-		binary += String.fromCharCode(bytes[i]);
-	}
-	return btoa(binary);
-}
-
 class Header extends Component {
 	constructor(props) {
 		super(props);
@@ -30,7 +20,6 @@ class Header extends Component {
 
 	getNavigation = () => {
 		const { project_id, task_id } = this.props.match.params;
-
 		const navigationProject = (project_id) ? (
 			<div className='nav-bar-item'>
 				<div className='separator'>/</div>
@@ -63,12 +52,6 @@ class Header extends Component {
 	}
 
 	renderProfilePicture() {
-		if (this.props.profile_picture.fileBinary) {
-			const arrayBuffer = this.props.profile_picture.fileBinary.data;
-			const base64String = arrayBufferToBase64(arrayBuffer);
-			const imageSrc = `data:image/png;base64,${base64String}`;
-			return (<img src={imageSrc} alt='user-profile' className='avatar' />);
-		}
 		return <i className='icon-user small' />;
 	}
 

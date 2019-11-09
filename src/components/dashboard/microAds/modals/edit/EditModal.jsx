@@ -39,7 +39,7 @@ class EditModal extends Component {
 					{(notification.status) ? <Alert variant='success'>{notification.text}</Alert> : null}
 					<Row>
 						<Col>
-						<Form.Group>
+							<Form.Group>
 								<Form.Label>Project Name</Form.Label>
 								<Form.Control
 									type='text'

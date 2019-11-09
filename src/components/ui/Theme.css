@@ -9,7 +9,6 @@ body {
 	overflow-x: hidden;
 }
 
-
 h1, h2, h3, h4 {
 	font-weight: bold;
 	margin: 0;
@@ -221,8 +220,15 @@ a {
 .logo-webandtv {
 	background-image: url(../../assets/images/logo-webandtv.svg);
 	background-position: center;
+	background-repeat: no-repeat;
 	width: 138px;
 	height: 20px;
+}
+
+.logo-webandtv.large {
+	width: 248px;
+	background-size: contain;
+	height: 37px;
 }
 
 .icon-menu {

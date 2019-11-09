@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Pie } from 'react-chartjs-2';
-import PropTypes from 'prop-types';
 
-class CostRevenues extends Component {
+class GenderWidget extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -15,34 +14,22 @@ class CostRevenues extends Component {
 	UNSAFE_componentWillMount() {
 		const data = {
 			labels: [
-				'Phase A',
-				'Phase B',
-				'Phase C',
-				'Phase D',
-				'Phase E',
-				'Phase F',
-				'Phase G',
+				'Undefined',
+				'Male',
+				'Female',
 			],
 			datasets: [
 				{
-					label: 'Tasks Status',
+					label: 'Gender',
 					data: [
 						70,
 						60,
 						15,
-						20,
-						90,
-						30,
-						100,
 					],
 					backgroundColor: [
 						'#7077c5',
 						'#16E7B5',
 						'#FE7B7B',
-						'#f9a75e',
-						'#ffd042',
-						'#ca6bc2',
-						'#4593ef',
 					],
 				},
 			],
@@ -65,7 +52,7 @@ class CostRevenues extends Component {
 			<div className='box'>
 				<Row>
 					<Col className='min-bottom'>
-						<h3>Cost Per Phases</h3>
+						<h3>Gender</h3>
 					</Col>
 				</Row>
 				<Row className='div-line'>
@@ -83,12 +70,4 @@ class CostRevenues extends Component {
 	}
 }
 
-CostRevenues.propTypes = {
-	fullPhases: PropTypes.object,
-};
-
-CostRevenues.defaultProps = {
-	fullPhases: {},
-};
-
-export default CostRevenues;
+export default GenderWidget;

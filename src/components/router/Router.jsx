@@ -7,10 +7,11 @@ import PropTypes from 'prop-types';
 import { routes } from './Routes';
 
 const isAuthenticated = () => {
-	if (localStorage.getItem('id')) {
+	/*if (localStorage.getItem('id')) {
 		return true;
 	}
-	return false;
+	return false;*/
+	return true;
 };
 
 const PrivateRoute = ({ component: Component, ...rest }) => (

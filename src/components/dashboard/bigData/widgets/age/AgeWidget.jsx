@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Bar } from 'react-chartjs-2';
 
-class AverageCost extends Component {
+class AgeWidget extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -12,12 +12,47 @@ class AverageCost extends Component {
 
 	UNSAFE_componentWillMount() {
 		const data = {
-			labels: [],
-			datasets: [
+			labels: [
+				'8-9',
+				'10-14',
+        '15-19',
+        '20-24',
+        '25-34',
+        '35-39',
+        '40-44',
+        '45-54',
+        '55-64',
+        '65>',
+      ],
+      datasets: [
 				{
-					label: 'Tasks Status',
-					data: [],
-					backgroundColor: [],
+					label: 'Age',
+					data: [
+						70,
+						60,
+            15,
+            100,
+            210,
+            120,
+            420,
+            300,
+            310,
+            260,
+					],
+					backgroundColor: [
+            '#7077c5',
+						'#16E7B5',
+            '#FE7B7B',
+            '#7077c5',
+						'#16E7B5',
+            '#FE7B7B',
+            '#7077c5',
+						'#16E7B5',
+            '#FE7B7B',
+            '#7077c5',
+						'#16E7B5',
+						'#FE7B7B',
+          ],
 				},
 			],
 		};
@@ -31,10 +66,10 @@ class AverageCost extends Component {
 			cutoutPercentage: 60,
 			scales: {
 				xAxes: [{
-					stacked: true,
+					stacked: false,
 				}],
 				yAxes: [{
-					stacked: true,
+					stacked: false,
 				}],
 			},
 		};
@@ -48,7 +83,7 @@ class AverageCost extends Component {
 			<div className='box'>
 				<Row>
 					<Col className='min-bottom'>
-						<h3>Time by Phases/Tasks (Days)</h3>
+						<h3>Age</h3>
 					</Col>
 				</Row>
 				<Row className='div-line none-bottom'>
@@ -65,4 +100,4 @@ class AverageCost extends Component {
 	}
 }
 
-export default AverageCost;
+export default AgeWidget;

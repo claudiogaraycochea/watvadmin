@@ -10,7 +10,6 @@ import MicroAds from '../dashboard/microAds/MicroAdsContainer';
 import MicroAdsDetail from '../dashboard/microAds/detail/DetailContainer';
 
 import BigData from '../dashboard/bigData/BigDataContainer';
-import Analysis from '../dashboard/analysis/AnalysisContainer';
 import Support from '../dashboard/support/SupportContainer';
 import Innovation from '../dashboard/innovation/InnovationContainer';
 import NotFound from '../public/error/notFound/NotFound';
@@ -114,14 +113,6 @@ export const routes = [
 		exact: true,
 		path: '/dashboard/support',
 		Component: Support,
-		Layout: Dashboard,
-		Access: 'Private',
-	},
-	{
-		id: 10,
-		exact: true,
-		path: '/dashboard/analysis',
-		Component: Analysis,
 		Layout: Dashboard,
 		Access: 'Private',
 	},

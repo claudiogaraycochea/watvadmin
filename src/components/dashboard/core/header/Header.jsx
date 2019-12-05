@@ -19,7 +19,15 @@ class Header extends Component {
 	}
 
 	getNavigation = () => {
-		const { project_id, task_id } = this.props.match.params;
+		const { profile_id, project_id, task_id } = this.props.match.params;
+
+		const navigationProfile = (profile_id) ? (
+			<div className='nav-bar-item'>
+				<div className='separator'>/</div>
+				<Link to={`/dashboard/interactivity/`}>Interactivity</Link>
+			</div>
+		) : null;
+
 		const navigationProject = (project_id) ? (
 			<div className='nav-bar-item'>
 				<div className='separator'>/</div>
@@ -37,6 +45,7 @@ class Header extends Component {
 		return (
 			<div className='nav-bar'>
 				<Link to='/dashboard/'> Home </Link>
+				{navigationProfile}
 				{navigationProject}
 				{navigationSchedule}
 			</div>

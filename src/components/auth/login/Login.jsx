@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-	Button, Form, Row, Col,
+	Button, Form, Row, Col, Alert,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import { request, ContentTypes } from '../../../lib/apiConnect';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -11,19 +12,48 @@ class Login extends React.Component {
 		this.state = {
 			email: '',
 			password: '',
+			notification: {
+				status: false,
+				text: '',
+			},
 		};
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
+	async login() {
+		const { email, password } = this.state;
+		const data = {
+			email,
+			password
+		};
+		const endpoint = '/users/login';
+		try {
+			const resp = await request('POST', endpoint, data, { 
+					'content-type': ContentTypes.json,
+					headers: { 'X-Authenticated-Userid': '15000500000@1' }
+				} 
+			);
+			localStorage.setItem('token', resp.data.token);
+			this.props.history.push('/dashboard/');
+			console.log(resp);
+		} catch (err) {
+			console.error(err);
+			this.setState({
+				notification: {
+					status: true,
+					text: 'User or password wrong',
+				},
+			});
+		}
+	}
+
 	onHandleSubmit = (event) => {
 		event.preventDefault();
-		
 		console.log('Login: onHandleSubmit');
 		const { email, password } = this.state;
 		if (email !== '' && password !== '') {
 			console.log('open');
-			// this.setState({ updated: true });
-			this.props.history.push('/dashboard/');
+			this.login();
 		}
 	};
 
@@ -39,6 +69,7 @@ class Login extends React.Component {
 		const {
 			email,
 			password,
+			notification,
 		} = this.state;
 		
 		return (
@@ -51,6 +82,7 @@ class Login extends React.Component {
 							</div>
 						</Col>
 					</Row>
+					{(notification.status) ? <Alert variant='danger'>{notification.text}</Alert> : null}
 					<Form onSubmit={this.onHandleSubmit}>
 						<Form.Group>
 							<Form.Label>Email</Form.Label>

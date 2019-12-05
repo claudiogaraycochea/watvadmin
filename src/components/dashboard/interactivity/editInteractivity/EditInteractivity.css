@@ -1,0 +1,30 @@
+.box-interactivity .col {
+  margin-bottom: 10px;
+}
+
+.box-interactivity {
+  height: 500px;
+}
+
+.box-interactivity .btn-header {
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+
+.box-interactivity .list-wrapper {
+
+}
+
+.box-interactivity .list-wrapper td {
+  padding: 5px 10px;
+}
+
+.box-interactivity .list-wrapper td.div-right {
+  border-right: 1px dotted #adb5bd;
+  width: 74px;
+}
+
+.box-interactivity .list-wrapper tr {
+  border-bottom: 1px solid #adb5bd;
+}

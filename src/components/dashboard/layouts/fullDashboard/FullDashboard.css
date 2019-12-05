@@ -1,0 +1,39 @@
+.main-app {
+  width: -webkit-fill-available;
+  min-height: -webkit-fill-available;
+}
+
+.side-menu.little .channel-wrapper {
+  padding: 10px;
+}
+
+.side-menu.little {
+  width: 80px;
+  font-size: 12px;
+}
+
+.side-menu.little .menu-items .item {
+  display: flex;
+  font-size: 12px;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu.little .logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu.little .logo-webandtv {
+	background-image: url(../../../../assets/images/logo-watv.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 48px;
+  height: 48px;
+}
+
+.sidebar_footer {
+  font-size: 10px;
+}

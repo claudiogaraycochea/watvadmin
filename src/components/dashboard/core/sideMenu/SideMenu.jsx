@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import './SideMenu.css';
 
 class SideMenu extends Component {
@@ -10,6 +9,59 @@ class SideMenu extends Component {
 	}
 
 	render() {
+		const { size } = this.props;
+		console.log('size: ', size);
+		if (size === 'little') {
+			return (
+				<div>
+					<div className='side-menu-header position-relative'>
+						<div className='logo-wrapper'>
+							<i className='logo-webandtv' />
+						</div>
+					</div>
+					<div className='channel-wrapper'>
+						AMERICA TV
+					</div>
+					<div className='menu-items'>
+						<Link to='/dashboard/interactivity' className='text-white'>
+							<div className='item'>
+								<i className='icon-interactivity' />
+							</div>
+						</Link>
+						<Link to='/dashboard/micropayments' className='text-white'>
+							<div className='item'>
+								<i className='icon-micropayment' />
+							</div>
+						</Link>
+						<Link to='/dashboard/microads' className='text-white'>
+							<div className='item'>
+								<i className='icon-microads' />
+							</div>
+						</Link>
+						<Link to='/dashboard/bigdata' className='text-white'>
+							<div className='item'>
+								<i className='icon-big-data' />
+							</div>
+						</Link>
+						<Link to='/dashboard/support' className='text-white'>
+							<div className='item'>
+								<i className='icon-support' />
+							</div>
+						</Link>
+						<Link to='/dashboard/innovation' className='text-white'>
+							<div className='item'>
+								<i className='icon-innovation' />
+							</div>
+						</Link>
+					</div>
+					<div className='sidebar_footer'>
+						<span>
+							{`Copyright ${new Date().getFullYear()} Weband.tv`}
+						</span>
+					</div>
+				</div>
+			);
+		}
 		return (
 			<div>
 				<div className='side-menu-header position-relative'>

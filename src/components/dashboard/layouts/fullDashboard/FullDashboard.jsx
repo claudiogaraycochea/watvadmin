@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import PropType from 'prop-types';
 import { Container } from 'react-bootstrap';
 
-import SideMenu from './core/sideMenu/SideMenu';
-import Header from './core/header/HeaderContainer';
-import './Dashboard.css';
+import SideMenu from '../../core/sideMenu/SideMenu';
+import Header from '../../core/header/HeaderContainer';
+import './FullDashboard.css';
 
-class Dashboard extends Component {
+class FullDashboard extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -42,10 +42,6 @@ class Dashboard extends Component {
 		});
 	}
 
-	setMenu = () => {
-		this.setState({ menuType: 'little'});
-	}
-
 	render() {
 		const { menuStatus } = this.state;
 		const { children, projects } = this.props;
@@ -55,8 +51,8 @@ class Dashboard extends Component {
 		}
 		return (
 			<div className='main-app'>
-				<div className={menuStatusClass}>
-					<SideMenu />
+				<div className={`${menuStatusClass} little`}>
+					<SideMenu size='little'/>
 				</div>
 				<div className='main-container'>
 					<Header
@@ -72,14 +68,14 @@ class Dashboard extends Component {
 	}
 }
 
-Dashboard.propTypes = {
+FullDashboard.propTypes = {
 	setDevice: PropType.func.isRequired,
 	children: PropType.node.isRequired,
 	match: PropType.object.isRequired,
 };
 
-Dashboard.defaultProps = {
+FullDashboard.defaultProps = {
 	projects: [],
 };
 
-export default Dashboard;
+export default FullDashboard;

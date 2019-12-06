@@ -2,6 +2,7 @@
 import Login from '../auth/login/LoginContainer';
 import OverView from '../dashboard/overview/OverviewContainer';
 import Interactivity from '../dashboard/interactivity/InteractivityContainer';
+import InteractivityEdit from '../dashboard/interactivity/editInteractivity/EditInteractivityContainer';
 
 import MicroPayments from '../dashboard/microPayments/MicroPaymentsContainer';
 import MicroPaymentsDetail from '../dashboard/microPayments/detail/DetailContainer';
@@ -16,12 +17,13 @@ import NotFound from '../public/error/notFound/NotFound';
 import StyleGuide from '../ui/styleGuide/StyleGuide';
 /* Layouts */
 import Dashboard from '../dashboard/DashboardContainer';
+import FullDashboard from '../dashboard/layouts/fullDashboard/FullDashboardContainer';
 import PublicLayout from '../public/publicLayout/PublicLayout';
 import FullLayout from '../public/fullLayout/FullLayout';
 
 export const routes = [
 	{
-		id: 15,
+		id: 14,
 		exact: true,
 		path: '/dashboard/styleguide',
 		Component: StyleGuide,
@@ -85,7 +87,15 @@ export const routes = [
 		Access: 'Private',
 	},*/
 	{
-		id: 8,
+		id: 13,
+		exact: true,
+		path: '/dashboard/interactivity/editinteractivity/:profile_id',
+		Component: InteractivityEdit,
+		Layout: FullDashboard,
+		Access: 'Private',
+	},
+	{
+		id: 12,
 		exact: true,
 		path: '/dashboard/microAds/detail/:project_id',
 		Component: MicroAdsDetail,
@@ -93,7 +103,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 7,
+		id: 11,
 		exact: true,
 		path: '/dashboard/micropayments/detail/:project_id',
 		Component: MicroPaymentsDetail,
@@ -101,7 +111,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 12,
+		id: 10,
 		exact: true,
 		path: '/dashboard/innovation',
 		Component: Innovation,
@@ -109,7 +119,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 11,
+		id: 9,
 		exact: true,
 		path: '/dashboard/support',
 		Component: Support,
@@ -117,7 +127,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 9,
+		id: 8,
 		exact: true,
 		path: '/dashboard/bigdata',
 		Component: BigData,
@@ -125,7 +135,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 8,
+		id: 7,
 		exact: true,
 		path: '/dashboard/microads',
 		Component: MicroAds,
@@ -133,7 +143,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 7,
+		id: 6,
 		exact: true,
 		path: '/dashboard/micropayments',
 		Component: MicroPayments,
@@ -141,7 +151,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 6,
+		id: 4,
 		exact: true,
 		path: '/dashboard/interactivity',
 		Component: Interactivity,
@@ -149,7 +159,7 @@ export const routes = [
 		Access: 'Private',
 	},
 	{
-		id: 5,
+		id: 3,
 		exact: true,
 		path: '/dashboard',
 		Component: OverView,

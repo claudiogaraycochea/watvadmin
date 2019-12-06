@@ -6,6 +6,10 @@ import {
 import { Table, Modal } from '../../../ui/Theme';
 import './EditInteractivity.css';
 import AddMicrowebsiteModal from './modals/addMicrowebsite/AddMicrowebsiteModalContainer';
+import EditMicrowebsiteModal from './modals/editMicrowebsite/EditMicrowebsiteModalContainer';
+import AddScheduleModal from './modals/addSchedule/AddScheduleModalContainer';
+import PublishScheduleModal from './modals/publishSchedule/PublishScheduleModalContainer';
+import RemoveScheduleModal from './modals/removeSchedule/RemoveScheduleModalContainer';
 
 const schedule = [
 	{
@@ -68,7 +72,7 @@ class EditInteractivity extends Component {
 				<Row>
 					<Col className='pr-0'>
 						<div className='box box-interactivity'>
-							<Row>
+							<Row className='box-header'>
 								<Col>
 									<h3>Microwebsites</h3>
 								</Col>
@@ -93,6 +97,7 @@ class EditInteractivity extends Component {
 											type='text'
 											placeholder='Search'
 											value=''
+											readOnly
 										/>
 									</Form.Group>
 								</Col>
@@ -101,9 +106,10 @@ class EditInteractivity extends Component {
 								<Col>
 									<div className='list-wrapper'>
 										<Table>
-											{schedule.map((item) => {
+											<tbody>
+											{schedule.map((item, index) => {
 												return (
-													<tr>
+													<tr key={index}>
 														<td>
 															{item.name}
 														</td>
@@ -112,7 +118,7 @@ class EditInteractivity extends Component {
 																<Button
 																	className='btn btn-primary btn-small'
 																	onClick={() => this.handleModal(
-																		<AddMicrowebsiteModal
+																		<EditMicrowebsiteModal
 																			handleModalClose={this.handleModalClose}
 																			handleModalAccept={this.handleModalAccept}
 																		/>,
@@ -123,7 +129,7 @@ class EditInteractivity extends Component {
 																<Button
 																	className='btn btn-secondary btn-small'
 																	onClick={() => this.handleModal(
-																		<AddMicrowebsiteModal
+																		<AddScheduleModal
 																			handleModalClose={this.handleModalClose}
 																			handleModalAccept={this.handleModalAccept}
 																		/>,
@@ -137,6 +143,7 @@ class EditInteractivity extends Component {
 												)
 											})
 											}
+											</tbody>
 										</Table>
 									</div>
 								</Col>
@@ -145,7 +152,7 @@ class EditInteractivity extends Component {
 					</Col>
 					<Col className='pr-0'>
 						<div className='box box-interactivity'>
-							<Row>
+							<Row className='box-header'>
 								<Col>
 									<h3>Schedule</h3>
 								</Col>
@@ -153,7 +160,7 @@ class EditInteractivity extends Component {
 									<Button
 										className='btn btn-secondary btn-header btn-small'
 										onClick={() => this.handleModal(
-											<AddMicrowebsiteModal
+											<PublishScheduleModal
 												handleModalClose={this.handleModalClose}
 												handleModalAccept={this.handleModalAccept}
 											/>,
@@ -170,6 +177,7 @@ class EditInteractivity extends Component {
 											type='text'
 											placeholder='Search'
 											value=''
+											readOnly
 										/>
 									</Form.Group>
 								</Col>
@@ -178,9 +186,10 @@ class EditInteractivity extends Component {
 								<Col>
 									<div className='list-wrapper'>
 										<Table>
-											{schedule.map((item) => {
+											<tbody>
+											{schedule.map((item, index) => {
 												return (
-													<tr>
+													<tr key={index}>
 														<td className='div-right'>
 															{item.execute_time}
 														</td>
@@ -191,7 +200,7 @@ class EditInteractivity extends Component {
 															<Button
 																className='btn btn-secondary btn-small'
 																onClick={() => this.handleModal(
-																	<AddMicrowebsiteModal
+																	<RemoveScheduleModal
 																		handleModalClose={this.handleModalClose}
 																		handleModalAccept={this.handleModalAccept}
 																	/>,
@@ -204,6 +213,7 @@ class EditInteractivity extends Component {
 												)
 											})
 											}
+											</tbody>
 										</Table>
 									</div>
 								</Col>
@@ -212,7 +222,7 @@ class EditInteractivity extends Component {
 					</Col>
 					<Col className='pr-0'>
 						<div className='box box-interactivity'>
-							<Row>
+							<Row className='box-header'>
 								<Col>
 									<h3>Playlist</h3>
 								</Col>
@@ -227,6 +237,7 @@ class EditInteractivity extends Component {
 											type='text'
 											placeholder='Search'
 											value=''
+											readOnly
 										/>
 									</Form.Group>
 								</Col>
@@ -235,19 +246,21 @@ class EditInteractivity extends Component {
 								<Col>
 									<div className='list-wrapper'>
 										<Table>
-											{schedule.map((item) => {
-												return (
-													<tr>
-														<td className='div-right'>
-															{item.execute_time}
-														</td>
-														<td>
-															{item.name}
-														</td>
-													</tr>
-												)
-											})
-											}
+											<tbody>
+												{schedule.map((item, index) => {
+													return (
+														<tr key={index}>
+															<td className='div-right'>
+																{item.execute_time}
+															</td>
+															<td>
+																{item.name}
+															</td>
+														</tr>
+													)
+												})
+												}
+											</tbody>
 										</Table>
 									</div>
 								</Col>
@@ -256,7 +269,7 @@ class EditInteractivity extends Component {
 					</Col>
 					<Col>
 						<div className='box box-interactivity'>
-							<Row>
+							<Row className='box-header'>
 								<Col>
 									<h3>Player</h3>
 								</Col>

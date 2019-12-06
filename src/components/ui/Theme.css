@@ -528,6 +528,8 @@ a {
 	display: flex;
 	align-items: center;
 	font-size: 18px;
+	color: #641b9a;
+  font-weight: bold;
 	border-bottom: 1px solid #EEF2F5;
 }
 

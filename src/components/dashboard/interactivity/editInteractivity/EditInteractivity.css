@@ -16,6 +16,11 @@
 
 }
 
+.box-header {
+  color: #641b9a;
+  font-weight: bold;
+}
+
 .box-interactivity .list-wrapper td {
   padding: 5px 10px;
 }

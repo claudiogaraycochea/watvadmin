@@ -10,7 +10,6 @@ class SideMenu extends Component {
 
 	render() {
 		const { size } = this.props;
-		console.log('size: ', size);
 		if (size === 'little') {
 			return (
 				<div>

@@ -3,7 +3,7 @@ import {
 	Row, Col, Button, Alert, Form,
 } from 'react-bootstrap';
 
-class AddProfileModal extends Component {
+class PublishScheduleModal extends Component {
 	constructor(props, context) {
 		super(props, context);
 		this.state = {
@@ -27,51 +27,31 @@ class AddProfileModal extends Component {
 		return (
 			<div>
 				<div className='modal-header'>
-					Add Profile
+					Publish Schedule
 				</div>
 				<div className='modal-container'>
 					{(notification.status) ? <Alert variant='success'>{notification.text}</Alert> : null}
 					<Row>
 						<Col>
 							<Form.Group>
-								<Form.Label>TV Channel/Program Name</Form.Label>
+								<Form.Label>Project Name</Form.Label>
 								<Form.Control
 									type='text'
-									placeholder='Eg: 60 Minutes'
+									placeholder='Project Name'
 									name='project_name'
 									value={project_name}
 									onChange={this.handleInputChange}
 								/>
 							</Form.Group>
               <Form.Group>
-								<Form.Label>Your Vanity URL (Alphanumeric Characters)</Form.Label>
+								<Form.Label>Linkname</Form.Label>
 								<Form.Control
 									type='text'
-									placeholder='Eg: 60minutes'
+									placeholder='Project Name'
 									name='project_name'
 									value={project_name}
 									onChange={this.handleInputChange}
 								/>
-								https://weband.tv/linkname
-							</Form.Group>
-							<Form.Group as={Row}>
-								<Col sm={4}>
-									Profile Type
-								</Col>
-								<Col sm={8}>
-									<Form.Check
-										type="radio"
-										label="Channel"
-										name="formHorizontalRadios"
-										id="formHorizontalRadios1"
-									/>
-									<Form.Check
-										type="radio"
-										label="Program"
-										name="formHorizontalRadios"
-										id="formHorizontalRadios2"
-									/>
-								</Col>
 							</Form.Group>
             </Col>
 					</Row>
@@ -82,7 +62,7 @@ class AddProfileModal extends Component {
 						className='btn-secondary'
 						onClick={handleModalAccept}
 					>
-						Save
+						Finish
 					</Button>
 				</div>
 			</div>
@@ -90,4 +70,4 @@ class AddProfileModal extends Component {
 	}
 }
 
-export default AddProfileModal;
+export default PublishScheduleModal;

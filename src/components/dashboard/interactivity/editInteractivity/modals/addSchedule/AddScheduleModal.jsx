@@ -4,6 +4,7 @@ import {
 } from 'react-bootstrap';
 import { Table } from '../../../../../ui/Theme';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 class AddScheduleModal extends Component {
 	constructor(props, context) {
@@ -14,8 +15,39 @@ class AddScheduleModal extends Component {
 				text: '',
 			},
 			project_name: '',
+			execute_time: '00:00:01',
+			end_time: '00:00:01',
+			duration: '20',
 			url: 'http://example.com/link',
 		};
+		this.handleInputChange = this.handleInputChange.bind(this);
+		this.handleInputDurationChange = this.handleInputDurationChange.bind(this);
+	}
+
+	onHandleSubmit = (event) => {
+		event.preventDefault();
+		console.log('Login: onHandleSubmit');
+		const { email, password } = this.state;
+		if (email !== '' && password !== '') {
+			console.log('open');
+			this.login();
+		}
+	};
+
+	handleInputChange(event) {
+		const { target } = event;
+		const { name } = target;
+		const value = target.type === 'checkbox' ? target.checked : target.value;
+
+		this.setState({ [name]: value });
+	}
+
+	handleInputDurationChange(event) {
+		const { target } = event;
+		const duration = target.value;
+		const { execute_time } = this.state; 
+		const end_time = moment(execute_time, 'hh:mm:ss').add(duration, 'seconds').format('hh:mm:ss');
+		this.setState({ duration, end_time });
 	}
 
 	render() {
@@ -25,8 +57,10 @@ class AddScheduleModal extends Component {
 		} = this.props;
 		const {
 			notification,
-			project_name,
+			execute_time,
+			end_time,
 			url,
+			duration,
 		} = this.state;
 		return (
 			<div>
@@ -124,18 +158,29 @@ class AddScheduleModal extends Component {
 									<Form.Label>Start</Form.Label>
 									<Form.Control
 										type='time'
-										name='task_startDate'
-										value=''
-										// onChange={this.handleInputChange}
+										format='HH:mm:ss'
+										name='execute_time'
+										value={execute_time}
+										onChange={this.handleInputChange}
+									/>
+								</Form.Group>
+								<Form.Group as={Col}>
+									<Form.Label>Duration</Form.Label>
+									<Form.Control
+										type='number'
+										name='duration'
+										value={duration}
+										onChange={this.handleInputDurationChange}
 									/>
 								</Form.Group>
 								<Form.Group as={Col}>
 									<Form.Label>End</Form.Label>
 									<Form.Control
 										type='time'
-										name='task_endDate'
-										value=''
-										// onChange={this.handleInputChange}
+										format='HH:mm:ss'
+										name='end_time'
+										value={end_time}
+										onChange={this.handleInputChange}
 									/>
 								</Form.Group>
 							</Form.Row>
@@ -153,7 +198,7 @@ class AddScheduleModal extends Component {
 						className='btn-secondary'
 						onClick={handleModalAccept}
 					>
-						Finish
+						Add to Schedule
 					</Button>
 				</div>
 			</div>

@@ -60,7 +60,7 @@ class EditInteractivity extends Component {
 			children,
 		} = this.state;
 		return (
-			<div>
+			<div className='full-height'>
 				<Row>
 					<Col>
 						<h2>Interactivity</h2>
@@ -69,7 +69,7 @@ class EditInteractivity extends Component {
 						<div>https://weband.tv/linkname</div>
 					</Col>
 				</Row>
-				<Row>
+				<Row className='full-height'>
 					<Col className='pr-0'>
 						<div className='box box-interactivity'>
 							<Row className='box-header'>
@@ -268,17 +268,14 @@ class EditInteractivity extends Component {
 						</div>
 					</Col>
 					<Col>
-						<div className='box box-interactivity'>
-							<Row className='box-header'>
-								<Col>
-									<h3>Player</h3>
-								</Col>
-							</Row>
-							<Row>
-								<Col>
-									<div>
-										List
-									</div>
+						<div className='box box-interactivity box-dark'>
+							<Row className='full-height'>
+								<Col className='mb-0'>
+									<iframe 
+										title={'watv'}
+										src='https://weband.tv/intrusos'
+										className="app-iframe-container"
+								  />
 								</Col>
 							</Row>
 						</div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
 	Row, Col, Button, Alert, Form,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class RemoveScheduleModal extends Component {
 	constructor(props, context) {
@@ -12,6 +13,7 @@ class RemoveScheduleModal extends Component {
 				text: '',
 			},
 			project_name: '',
+			url: 'http://wwwwww',
     };
 	}
 
@@ -22,7 +24,7 @@ class RemoveScheduleModal extends Component {
 		} = this.props;
 		const {
 			notification,
-			project_name,
+			url,
 		} = this.state;
 		return (
 			<div>
@@ -34,24 +36,10 @@ class RemoveScheduleModal extends Component {
 					<Row>
 						<Col>
 							<Form.Group>
-								<Form.Label>Project Name</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Project Name'
-									name='project_name'
-									value={project_name}
-									onChange={this.handleInputChange}
-								/>
+								Name: <h3>Microwebsite Name</h3>
 							</Form.Group>
-              <Form.Group>
-								<Form.Label>Linkname</Form.Label>
-								<Form.Control
-									type='text'
-									placeholder='Project Name'
-									name='project_name'
-									value={project_name}
-									onChange={this.handleInputChange}
-								/>
+							<Form.Group>
+								URL: <Link to={url}>{url}</Link>
 							</Form.Group>
             </Col>
 					</Row>
@@ -62,7 +50,7 @@ class RemoveScheduleModal extends Component {
 						className='btn-secondary'
 						onClick={handleModalAccept}
 					>
-						Finish
+						Remove
 					</Button>
 				</div>
 			</div>

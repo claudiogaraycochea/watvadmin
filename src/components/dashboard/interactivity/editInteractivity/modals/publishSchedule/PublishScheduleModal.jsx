@@ -34,17 +34,17 @@ class PublishScheduleModal extends Component {
 					<Row>
 						<Col>
 							<Form.Group>
-								<Form.Label>Project Name</Form.Label>
+								<Form.Label>Email</Form.Label>
 								<Form.Control
 									type='text'
-									placeholder='Project Name'
+									placeholder='Email'
 									name='project_name'
 									value={project_name}
 									onChange={this.handleInputChange}
 								/>
 							</Form.Group>
               <Form.Group>
-								<Form.Label>Linkname</Form.Label>
+								<Form.Label>Password</Form.Label>
 								<Form.Control
 									type='text'
 									placeholder='Project Name'
@@ -62,7 +62,7 @@ class PublishScheduleModal extends Component {
 						className='btn-secondary'
 						onClick={handleModalAccept}
 					>
-						Finish
+						Authorize & Publish
 					</Button>
 				</div>
 			</div>

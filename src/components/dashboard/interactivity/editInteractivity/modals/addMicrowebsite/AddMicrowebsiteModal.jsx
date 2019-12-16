@@ -34,20 +34,20 @@ class AddMicrowebsiteModal extends Component {
 					<Row>
 						<Col>
 							<Form.Group>
-								<Form.Label>Project Name</Form.Label>
+								<Form.Label>Name</Form.Label>
 								<Form.Control
 									type='text'
-									placeholder='Project Name'
+									placeholder='Eg: Micropayment for vote'
 									name='project_name'
 									value={project_name}
 									onChange={this.handleInputChange}
 								/>
 							</Form.Group>
               <Form.Group>
-								<Form.Label>Linkname</Form.Label>
+								<Form.Label>URL</Form.Label>
 								<Form.Control
 									type='text'
-									placeholder='Project Name'
+									placeholder='http://example.com/micropayment/xxxxxxxxx'
 									name='project_name'
 									value={project_name}
 									onChange={this.handleInputChange}
@@ -62,7 +62,7 @@ class AddMicrowebsiteModal extends Component {
 						className='btn-secondary'
 						onClick={handleModalAccept}
 					>
-						Finish
+						Add
 					</Button>
 				</div>
 			</div>

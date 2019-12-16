@@ -3,7 +3,11 @@
 }
 
 .box-interactivity {
-  height: 500px;
+  /*height: 400px;*/
+}
+
+.box-dark {
+  background-color: #222222;
 }
 
 .box-interactivity .btn-header {
@@ -32,4 +36,13 @@
 
 .box-interactivity .list-wrapper tr {
   border-bottom: 1px solid #adb5bd;
+}
+
+.app-iframe-container {
+  border: 0 solid;
+  height: -webkit-fill-available;
+  padding-bottom: 0px;
+  border-radius: 10px;
+  width: 280px;
+  height: 100%;
 }
